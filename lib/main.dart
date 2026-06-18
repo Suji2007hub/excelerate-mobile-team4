@@ -1,6 +1,6 @@
-<<<<<<< HEAD
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+
 import 'firebase_options.dart';
 import 'screens/splash_screen.dart';
 
@@ -22,11 +22,14 @@ class ExcelerateApp extends StatelessWidget {
     return MaterialApp(
       title: 'Excelerate Pathfinder',
       debugShowCheckedModeBanner: false,
+
       theme: ThemeData(
         primaryColor: const Color(0xFFE0194A),
         scaffoldBackgroundColor: const Color(0xFFF7F7F7),
         fontFamily: 'Roboto',
       ),
+
+      // Start app here
       home: const SplashScreen(),
     );
   }
