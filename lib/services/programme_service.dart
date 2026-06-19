@@ -17,6 +17,11 @@ class ProgrammeService {
     return null;
   }
 
+  Stream<List<ProgrammeModel>> getAllProgrammes() {
+    return _programmesCollection.snapshots().map((snapshot) =>
+        snapshot.docs.map((doc) => ProgrammeModel.fromFirestore(doc)).toList());
+  }
+
   Future<void> updateProgramme(String programmeId, Map<String, dynamic> data) {
     return _programmesCollection.doc(programmeId).update(data);
   }

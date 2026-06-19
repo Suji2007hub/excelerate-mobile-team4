@@ -17,6 +17,12 @@ class RoadmapService {
     return null;
   }
 
+  Future<RoadmapModel?> getRoadmapByUserId(String userId) async {
+    // This assumes that the roadmap document ID is the same as the user ID.
+    // If this is not the case, you may need to query the collection instead.
+    return getRoadmap(userId);
+  }
+
   Future<void> updateRoadmap(String roadmapId, Map<String, dynamic> data) {
     return _roadmapsCollection.doc(roadmapId).update(data);
   }
