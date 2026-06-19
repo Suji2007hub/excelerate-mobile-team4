@@ -24,11 +24,19 @@ class DefaultFirebaseOptions {
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
-        // TODO: Replace with your Android Firebase options
-        throw UnsupportedError('Android not configured');
+        // This is a placeholder that will throw an error.
+        // Replace with your actual Android Firebase options.
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for android. '
+          'Run "flutterfire configure" to generate this file.',
+        );
       case TargetPlatform.iOS:
-        // TODO: Replace with your iOS Firebase options
-        throw UnsupportedError('iOS not configured');
+        // This is a placeholder that will throw an error.
+        // Replace with your actual iOS Firebase options.
+        throw UnsupportedError(
+          'DefaultFirebaseOptions have not been configured for ios. '
+          'Run "flutterfire configure" to generate this file.',
+        );
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '

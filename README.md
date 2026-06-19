@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🧭 Excelerate Pathfinder
+#  Excelerate Pathfinder
 
 ### *Your Personalised Learning and Career Navigation Platform*
 
@@ -17,7 +17,7 @@
 
 ---
 
-## 📌 Table of Contents
+##  Table of Contents
 
 - [The Problem We're Solving](#-the-problem-were-solving)
 - [Our Solution](#-our-solution)
@@ -35,7 +35,7 @@
 
 ---
 
-## 🔍 The Problem We're Solving
+##  The Problem We're Solving
 
 Excelerate offers learners access to a wide range of valuable opportunities — courses,
 internships, mentorships, scholarships, and competitions. But two critical problems
@@ -73,7 +73,7 @@ knowing how much is being absorbed.
 
 ---
 
-## 💡 Our Solution
+##  Our Solution
 
 **Excelerate Pathfinder** transforms a large collection of learning and career
 opportunities into a **clear, personalised growth journey** — and keeps learners and
@@ -96,9 +96,9 @@ compounds into disengagement.
 
 ---
 
-## ✨ Key Features
+##  Key Features
 
-### 👤 For Learners
+###  For Learners
 
 | Feature | Description |
 |---|---|
@@ -107,10 +107,10 @@ compounds into disengagement.
 | **Progress Tracking** | Track completed courses, internships, and milestones in one place |
 | **Achievement Portfolio** | Display earned certificates, badges, and accomplishments in a shareable profile |
 | **Smart Reminders** | Push notifications for upcoming deadlines, live sessions, and new opportunities |
-| **💓 PulseCheck Feedback** | One-tap in-session feedback: tell your tutor exactly how you are following the content right now |
+| ** PulseCheck Feedback** | One-tap in-session feedback: tell your tutor exactly how you are following the content right now |
 | **Highlighted Chat Messages** | Important messages in the session chat area are visually highlighted so nothing critical is missed |
 
-### 🧑‍🏫 For Tutors & Mentors
+###  For Tutors & Mentors
 
 | Feature | Description |
 |---|---|
@@ -120,7 +120,7 @@ compounds into disengagement.
 | **Learner Progress Overview** | Track how individual learners are progressing through their roadmaps |
 | **Feedback-Driven Adjustment** | Use live PulseCheck data to slow down, re-explain, or fast-forward in real time |
 
-### 🛠 For Administrators
+###  For Administrators
 
 | Feature | Description |
 |---|---|
@@ -130,7 +130,7 @@ compounds into disengagement.
 
 ---
 
-## 💓 PulseCheck — Real-Time Feedback System
+##  PulseCheck — Real-Time Feedback System
 
 PulseCheck is the core innovation of Excelerate Pathfinder. It gives every learner
 a **voice in the room** without disrupting the flow of a session, and gives every tutor
@@ -144,10 +144,10 @@ at that moment:
 
 | Button | Signal | What It Tells the Tutor |
 |---|---|---|
-| 👍 **Got It** | I understand — keep going | Content is landing well; maintain pace |
-| 😕 **Confused** | Something isn't clicking | Slow down; a concept needs revisiting |
-| ⏩ **Too Fast** | You're moving too quickly | Reduce pace; learner is falling behind |
-| ❓ **Need More Explanation** | I need this unpacked further | Go deeper on this topic before moving on |
+|  **Got It** | I understand — keep going | Content is landing well; maintain pace |
+|  **Confused** | Something isn't clicking | Slow down; a concept needs revisiting |
+|  **Too Fast** | You're moving too quickly | Reduce pace; learner is falling behind |
+|  **Need More Explanation** | I need this unpacked further | Go deeper on this topic before moving on |
 
 ### What the Tutor Sees
 
@@ -164,7 +164,7 @@ turning tutors into responsive, data-informed instructors.
 
 ---
 
-## 🔄 User Journeys
+##  User Journeys
 
 ### Learner Journey
 
@@ -227,7 +227,7 @@ turning tutors into responsive, data-informed instructors.
 
 ---
 
-## 🖼 Wireframes — 4 Core Screens
+##  Wireframes — 4 Core Screens
 
 The following four screens form the core user interface of Excelerate Pathfinder.
 Wireframe files are available in the `/docs/wireframes/` folder of this repository.
@@ -264,15 +264,15 @@ The learner's personal hub — at a glance view of their journey.
 
 ```
 ┌─────────────────────────────┐
-│  👋 Welcome back, [Name]!   │
+│   Welcome back, [Name]!   │
 │                             │
 │  ── Recommended For You ──  │
 │  ┌─────────────────────┐    │
-│  │ 📚 Marketing Course  │    │
+│  │  Marketing Course  │    │
 │  │ Starts: June 12     │    │
 │  └─────────────────────┘    │
 │  ┌─────────────────────┐    │
-│  │ 💼 Tech Internship   │    │
+│  │  Tech Internship   │    │
 │  │ Apply by: June 20   │    │
 │  └─────────────────────┘    │
 │                             │
@@ -290,10 +290,10 @@ The learner's personalised, step-by-step growth path.
 ┌─────────────────────────────┐
 │      My Learning Roadmap    │
 │                             │
-│  ✅ Marketing Fundamentals  │
+│   Marketing Fundamentals  │
 │      └── Completed          │
 │           │                 │
-│  ▶ Digital Marketing Course │◄── Current Milestone
+│   Digital Marketing Course │◄── Current Milestone
 │      └── In Progress        │
 │           │                 │
 │  ○  Social Media Internship │
@@ -312,7 +312,7 @@ The in-session feedback screen — the heart of real-time communication.
 
 ```
 ┌─────────────────────────────┐
-│  📡 Live Session            │
+│   Live Session            │
 │  Digital Marketing 101      │
 │  Tutor: Ms. Adaeze          │
 │                             │
@@ -330,14 +330,14 @@ The in-session feedback screen — the heart of real-time communication.
 │  └──────────┘ └──────────┘  │
 │                             │
 │  ── Session Chat ──         │
-│  ⭐ [Important message      │
+│   [Important message      │
 │      highlighted here]      │
 └─────────────────────────────┘
 ```
 
 ---
 
-## 🗺 Navigation Flow
+##  Navigation Flow
 
 ```
 App Launch
@@ -354,7 +354,7 @@ App Launch
                     │                                     │
         ┌───────────┼───────────┬────────────┐            │
         │           │           │            │            │
-     🏠 Home    🗺 Roadmap  📈 Progress  🏆 Portfolio      │
+      Home     Roadmap   Progress    Portfolio      │
         │           │           │            │            │
    Recommended  Step-by-step  Badges &   Certificates     │
    Opportunities  pathway    milestones   & achievements   │
@@ -383,7 +383,7 @@ Tutor / Admin Entry (separate login role)
 
 ---
 
-## 🛠 Tech Stack
+##  Tech Stack
 
 | Layer | Technology | Purpose |
 |---|---|---|
@@ -403,7 +403,7 @@ Tutor / Admin Entry (separate login role)
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 excelerate-mobile-team4/
@@ -452,7 +452,7 @@ excelerate-mobile-team4/
 │   │   ├── opportunity_card.dart              # Recommended opportunity card
 │   │   ├── progress_bar_widget.dart           # Course/milestone progress bar
 │   │   ├── badge_tile.dart                    # Achievement badge display
-│   │   ├── highlighted_message.dart           # ⭐ Highlighted chat message widget
+│   │   ├── highlighted_message.dart           #  Highlighted chat message widget
 │   │   └── smart_reminder_banner.dart         # Deadline/session reminder banner
 │   │
 │   ├── models/
@@ -505,7 +505,7 @@ excelerate-mobile-team4/
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -554,7 +554,7 @@ flutter test integration_test/
 
 ---
 
-## 👥 Team Roles & Contributions
+##  Team Roles & Contributions
 
 | Role | Responsibilities |
 |---|---|
@@ -571,7 +571,7 @@ flutter test integration_test/
 
 ---
 
-## 🤝 Contributing to This Repo
+##  Contributing to This Repo
 
 We follow **GitHub Flow** — one branch per feature, pull requests reviewed before
 anything merges to `main`.
@@ -606,7 +606,7 @@ You can contribute without writing any code:
 
 ---
 
-## 📄 License
+##  License
 
 This project is yet to be licensed.
 
