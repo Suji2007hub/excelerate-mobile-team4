@@ -1,4 +1,5 @@
 import 'package:cloud_functions/cloud_functions.dart';
+import 'package:flutter/foundation.dart';
 
 class OnboardingService {
   final FirebaseFunctions _functions = FirebaseFunctions.instance;
@@ -14,7 +15,7 @@ class OnboardingService {
     } on FirebaseFunctionsException catch (e) {
       // It's a good practice to handle specific errors from the Cloud Function.
       // For example, if the function throws an error with a specific code.
-      print('Cloud Function Error: ${e.code} - ${e.message}');
+      debugPrint('Cloud Function Error: ${e.code} - ${e.message}');
       rethrow;
     }
   }

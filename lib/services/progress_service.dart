@@ -1,4 +1,5 @@
 import 'package:cloud_functions/cloud_functions.dart';
+import 'package:flutter/foundation.dart';
 
 class ProgressService {
   final FirebaseFunctions _functions = FirebaseFunctions.instance;
@@ -13,7 +14,7 @@ class ProgressService {
         'stepId': stepId,
       });
     } on FirebaseFunctionsException catch (e) {
-      print('Cloud Function Error: ${e.code} - ${e.message}');
+      debugPrint('Cloud Function Error: ${e.code} - ${e.message}');
       rethrow;
     }
   }

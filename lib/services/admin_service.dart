@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
+import 'package:flutter/foundation.dart';
 
 class AdminService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
@@ -38,7 +39,7 @@ class AdminService {
       final callable = _functions.httpsCallable('generateAdminReport');
       await callable.call();
     } on FirebaseFunctionsException catch (e) {
-      print('Cloud Function Error: ${e.code} - ${e.message}');
+      debugPrint('Cloud Function Error: ${e.code} - ${e.message}');
       rethrow;
     }
   }
@@ -51,7 +52,7 @@ class AdminService {
         'message': message,
       });
     } on FirebaseFunctionsException catch (e) {
-      print('Cloud Function Error: ${e.code} - ${e.message}');
+      debugPrint('Cloud Function Error: ${e.code} - ${e.message}');
       rethrow;
     }
   }

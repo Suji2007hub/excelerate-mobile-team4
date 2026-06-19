@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:cloud_functions/cloud_functions.dart';
+import 'package:flutter/foundation.dart';
 import '../models/credential_card_model.dart';
 
 class CredentialCardService {
@@ -20,7 +21,7 @@ class CredentialCardService {
       final callable = _functions.httpsCallable('generateCredentialCard');
       await callable.call();
     } on FirebaseFunctionsException catch (e) {
-      print('Cloud Function Error: ${e.code} - ${e.message}');
+      debugPrint('Cloud Function Error: ${e.code} - ${e.message}');
       rethrow;
     }
   }
