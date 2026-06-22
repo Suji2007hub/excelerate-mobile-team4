@@ -36,7 +36,7 @@ class AdminAnalyticsScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(24),
               decoration: BoxDecoration(
-                color: const Color(0xFF0EA5E9).withOpacity(0.1),
+                color: const Color(0xFF0EA5E9).withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
               child: const Icon(

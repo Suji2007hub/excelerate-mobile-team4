@@ -6,7 +6,7 @@ class ProgrammeService {
       FirebaseFirestore.instance.collection('programmes');
 
   Future<DocumentReference> createProgramme(ProgrammeModel programme) {
-     print(" Writing to Firestore...");
+     // print(" Writing to Firestore...");
     return _programmesCollection.add(programme.toFirestore());
   }
 

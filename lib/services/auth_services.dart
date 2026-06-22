@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:flutter/material.dart';
+
 
 void signUpUser(
   String name,
@@ -12,12 +12,12 @@ void signUpUser(
 
   // 1. Validate input
   if (email.isEmpty || password.isEmpty) {
-    print("Fields cannot be empty");
+    // print("Fields cannot be empty");
     return;
   }
 
   if (password != confirmPassword) {
-    print("Passwords do not match");
+    // print("Passwords do not match");
     return;
   }
 
@@ -40,10 +40,10 @@ void signUpUser(
       "role": role,
     });
 
-    print("User created successfully");
+    // print("User created successfully");
 
   } catch (e) {
-    print("Error: $e");
+    // print("Error: $e");
   }
 }
 
@@ -52,24 +52,21 @@ Future<bool> loginUser(String email, String password) async {
   try {
 
     if (email.isEmpty || password.isEmpty) {
-      print("Fields cannot be empty");
+      // print("Fields cannot be empty");
       return false;
     }
 
-    final userCredential =
-        await FirebaseAuth.instance.signInWithEmailAndPassword(
+    await FirebaseAuth.instance.signInWithEmailAndPassword(
       email: email,
       password: password,
     );
 
-    String uid = userCredential.user!.uid;
-
-    print("Login successful: $uid");
+    // print("Login successful: $uid");
 
     return true;
 
   } catch (e) {
-    print("Login failed: $e");
+    // print("Login failed: $e");
     return false;
   }
 }

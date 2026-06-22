@@ -309,7 +309,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
               width: 40,
               height: 4,
               decoration: BoxDecoration(
-                color: kAuthAccent.withOpacity(0.3),
+                color: kAuthAccent.withValues(alpha: 0.3),
                 borderRadius: BorderRadius.circular(2),
               ),
             ),
@@ -318,7 +318,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
               width: 60,
               height: 60,
               decoration: BoxDecoration(
-                color: kAuthPrimary.withOpacity(0.1),
+                color: kAuthPrimary.withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
               child: const Icon(
@@ -342,7 +342,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
               textAlign: TextAlign.center,
               style: TextStyle(
                 fontSize: 13,
-                color: Colors.black.withOpacity(0.6),
+                color: Colors.black.withValues(alpha: 0.6),
                 height: 1.4,
               ),
             ),
@@ -414,10 +414,10 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
           child: Container(
             padding: const EdgeInsets.all(14),
             decoration: BoxDecoration(
-              color: color.withOpacity(0.05),
+              color: color.withValues(alpha: 0.05),
               borderRadius: BorderRadius.circular(12),
               border: Border.all(
-                color: color.withOpacity(0.2),
+                color: color.withValues(alpha: 0.2),
                 width: 1,
               ),
             ),
@@ -427,7 +427,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
                   width: 40,
                   height: 40,
                   decoration: BoxDecoration(
-                    color: color.withOpacity(0.15),
+                    color: color.withValues(alpha: 0.15),
                     borderRadius: BorderRadius.circular(10),
                   ),
                   child: Icon(icon, color: color, size: 20),
@@ -450,7 +450,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
                         subtitle,
                         style: TextStyle(
                           fontSize: 12,
-                          color: Colors.black.withOpacity(0.6),
+                          color: Colors.black.withValues(alpha: 0.6),
                         ),
                       ),
                     ],
@@ -582,7 +582,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
           'A: $answer',
           style: TextStyle(
             fontSize: 12,
-            color: Colors.black.withOpacity(0.7),
+            color: Colors.black.withValues(alpha: 0.7),
             height: 1.4,
           ),
         ),
@@ -626,7 +626,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.05),
+                      color: Colors.black.withValues(alpha: 0.05),
                       blurRadius: 30,
                       offset: const Offset(0, 10),
                     ),
@@ -757,7 +757,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
                             : _handleLogin,
                         style: ElevatedButton.styleFrom(
                           backgroundColor: kAuthPrimary,
-                          disabledBackgroundColor: kAuthPrimary.withOpacity(0.4),
+                          disabledBackgroundColor: kAuthPrimary.withValues(alpha: 0.4),
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12),
                           ),
@@ -797,7 +797,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
                       children: [
                         Expanded(
                           child: Divider(
-                            color: kAuthAccent.withOpacity(0.3),
+                            color: kAuthAccent.withValues(alpha: 0.3),
                             height: 1,
                           ),
                         ),
@@ -807,7 +807,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
                             'TROUBLE SIGNING IN?',
                             style: TextStyle(
                               fontSize: 10,
-                              color: Colors.black.withOpacity(0.5),
+                              color: Colors.black.withValues(alpha: 0.5),
                               letterSpacing: 1.2,
                               fontWeight: FontWeight.w600,
                             ),
@@ -815,7 +815,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
                         ),
                         Expanded(
                           child: Divider(
-                            color: kAuthAccent.withOpacity(0.3),
+                            color: kAuthAccent.withValues(alpha: 0.3),
                             height: 1,
                           ),
                         ),
@@ -834,10 +834,10 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
                           child: Container(
                             padding: const EdgeInsets.symmetric(vertical: 14),
                             decoration: BoxDecoration(
-                              color: kAuthAccentDark.withOpacity(0.05),
+                              color: kAuthAccentDark.withValues(alpha: 0.05),
                               borderRadius: BorderRadius.circular(12),
                               border: Border.all(
-                                color: kAuthAccentDark.withOpacity(0.3),
+                                color: kAuthAccentDark.withValues(alpha: 0.3),
                                 width: 1.2,
                               ),
                             ),
@@ -878,10 +878,10 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
                         padding: const EdgeInsets.symmetric(
                             horizontal: 12, vertical: 8),
                         decoration: BoxDecoration(
-                          color: kAuthAccentDark.withOpacity(0.08),
+                          color: kAuthAccentDark.withValues(alpha: 0.08),
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(
-                              color: kAuthAccentDark.withOpacity(0.2)),
+                              color: kAuthAccentDark.withValues(alpha: 0.2)),
                         ),
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
@@ -948,8 +948,8 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
                     shape: BoxShape.circle,
                     gradient: RadialGradient(
                       colors: [
-                        kAuthAccent.withOpacity(_logoGlow.value * 0.4),
-                        kAuthAccent.withOpacity(0.0),
+                        kAuthAccent.withValues(alpha: _logoGlow.value * 0.4),
+                        kAuthAccent.withValues(alpha: 0.0),
                       ],
                     ),
                   ),
@@ -967,7 +967,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: kAuthPrimary.withOpacity(0.4),
+                        color: kAuthPrimary.withValues(alpha: 0.4),
                         blurRadius: 12,
                         spreadRadius: 1,
                       ),
@@ -1012,7 +1012,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
           decoration: BoxDecoration(
-            color: kAuthAccentDark.withOpacity(0.08),
+            color: kAuthAccentDark.withValues(alpha: 0.08),
             borderRadius: BorderRadius.circular(12),
           ),
           child: const Text(
@@ -1030,7 +1030,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
           decoration: BoxDecoration(
-            color: kAuthPrimary.withOpacity(0.1),
+            color: kAuthPrimary.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(6),
             border: Border.all(color: kAuthPrimary, width: 1),
           ),
@@ -1084,7 +1084,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
       iconColor = kAuthPrimary;
     } else {
       borderColor = kAuthAccent;
-      bgColor = kAuthFieldBg.withOpacity(0.5);
+      bgColor = kAuthFieldBg.withValues(alpha: 0.5);
       iconColor = kAuthAccent;
     }
 
@@ -1104,7 +1104,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
             boxShadow: focused
                 ? [
               BoxShadow(
-                color: kAuthPrimary.withOpacity(0.12),
+                color: kAuthPrimary.withValues(alpha: 0.12),
                 blurRadius: 8,
                 offset: const Offset(0, 2),
               ),
@@ -1122,7 +1122,7 @@ class _AdminLoginScreenState extends State<AdminLoginScreen>
             decoration: InputDecoration(
               hintText: hint,
               hintStyle: TextStyle(
-                color: Colors.black.withOpacity(0.35),
+                color: Colors.black.withValues(alpha: 0.35),
                 fontSize: 14,
               ),
               prefixIcon: Padding(
@@ -1194,8 +1194,8 @@ class _GradientBackground extends StatelessWidget {
               shape: BoxShape.circle,
               gradient: RadialGradient(
                 colors: [
-                  kAuthBlobBlue.withOpacity(0.7),
-                  kAuthBlobBlue.withOpacity(0.0),
+                  kAuthBlobBlue.withValues(alpha: 0.7),
+                  kAuthBlobBlue.withValues(alpha: 0.0),
                 ],
               ),
             ),
@@ -1212,8 +1212,8 @@ class _GradientBackground extends StatelessWidget {
               shape: BoxShape.circle,
               gradient: RadialGradient(
                 colors: [
-                  kAuthBlobSky.withOpacity(0.5),
-                  kAuthBlobSky.withOpacity(0.0),
+                  kAuthBlobSky.withValues(alpha: 0.5),
+                  kAuthBlobSky.withValues(alpha: 0.0),
                 ],
               ),
             ),
@@ -1231,14 +1231,14 @@ class _GradientBackground extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  kAuthBlobBlue.withOpacity(0.3),
-                  kAuthBlobBlue.withOpacity(0.0),
+                  kAuthBlobBlue.withValues(alpha: 0.3),
+                  kAuthBlobBlue.withValues(alpha: 0.0),
                 ],
               ),
             ),
           ),
         ),
-        child!,
+        child,
       ],
     );
   }

@@ -3,7 +3,7 @@ import '../services/programme_service.dart';
 import '../models/programme_model.dart';
 
 Future<void> seedProgrammes() async {
-   print("🔥 SEED STARTED");
+   // print("🔥 SEED STARTED");
   final service = ProgrammeService();
 
   await service.createProgramme(
@@ -42,5 +42,5 @@ Future<void> seedProgrammes() async {
       updatedAt: Timestamp.now(),
     ),
   );
-  print("✅ SEED FINISHED");
+  // print("✅ SEED FINISHED");
 }

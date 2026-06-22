@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../../screens/admin_home_screen.dart';
 import '../../screens/admin_users_screen.dart';
 import '../../screens/admin_programs_screen.dart';
-import '../../screens/admin_announcements_screen.dart';
+
 import '../../screens/admin_analytics_screen.dart';
 import '../../screens/admin_profile_screen.dart';
 
@@ -56,7 +56,7 @@ class AdminBottomNav extends StatelessWidget {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withAlpha(12),
             blurRadius: 10,
             offset: const Offset(0, -2),
           ),
@@ -165,8 +165,6 @@ class AdminBottomNav extends StatelessWidget {
         nextScreen = const AdminProfileScreen();
         break;
     }
-
-    if (nextScreen == null) return;
 
     if (useReplacement) {
       Navigator.pushReplacement(
