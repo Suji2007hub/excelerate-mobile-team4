@@ -21,6 +21,12 @@ class UserService {
     return _usersCollection.doc(uid).update(data);
   }
 
+  Future<void> updateUserLastActiveAt(String uid) {
+    return _usersCollection.doc(uid).update({
+      'lastActiveAt': FieldValue.serverTimestamp(),
+    });
+  }
+
   Future<void> deleteUser(String uid) {
     return _usersCollection.doc(uid).delete();
   }
