@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../theme/app_theme_splash.dart';
+import 'app_theme_splash.dart';
 import 'admin_login_screen.dart';
 import 'learner_login_screen.dart';
 
@@ -104,8 +104,8 @@ class _SplashScreenState extends State<SplashScreen>
     Navigator.pushReplacement(
       context,
       PageRouteBuilder(
-        pageBuilder: (_, __, ___) => const AdminLoginScreen(),
-        transitionsBuilder: (_, animation, __, child) =>
+        pageBuilder: (_, _, _) => const AdminLoginScreen(),
+        transitionsBuilder: (_, animation, _, child) =>
             FadeTransition(opacity: animation, child: child),
         transitionDuration: const Duration(milliseconds: 500),
       ),
@@ -116,8 +116,8 @@ class _SplashScreenState extends State<SplashScreen>
     Navigator.pushReplacement(
       context,
       PageRouteBuilder(
-        pageBuilder: (_, __, ___) => const LoginScreen(),
-        transitionsBuilder: (_, animation, __, child) =>
+        pageBuilder: (_, _, _) => const LoginScreen(),
+        transitionsBuilder: (_, animation, _, child) =>
             FadeTransition(opacity: animation, child: child),
         transitionDuration: const Duration(milliseconds: 500),
       ),
@@ -183,7 +183,7 @@ class _SplashScreenState extends State<SplashScreen>
                 // Logo
                 AnimatedBuilder(
                   animation: _logoController,
-                  builder: (_, __) => Opacity(
+                  builder: (_, _) => Opacity(
                     opacity: _logoOpacity.value,
                     child: Transform.scale(
                       scale: _logoScale.value,
@@ -220,7 +220,7 @@ class _SplashScreenState extends State<SplashScreen>
                 // App name
                 AnimatedBuilder(
                   animation: _textController,
-                  builder: (_, __) => SlideTransition(
+                  builder: (_, _) => SlideTransition(
                     position: _textSlide,
                     child: Opacity(
                       opacity: _textOpacity.value,
@@ -337,7 +337,7 @@ class _SplashScreenState extends State<SplashScreen>
               right: 48,
               child: AnimatedBuilder(
                 animation: _progressController,
-                builder: (_, __) => Opacity(
+                builder: (_, _) => Opacity(
                   opacity: _progressValue.value > 0 ? 1.0 : 0.0,
                   child: Column(
                     children: [
@@ -403,7 +403,7 @@ class _SplashScreenState extends State<SplashScreen>
                 width: 48,
                 height: 48,
                 decoration: BoxDecoration(
-                  color: Colors.white.withOpacity(0.25),
+                  color: Colors.white.withValues(alpha: 0.25),
                   borderRadius: BorderRadius.circular(12),
                 ),
                 child: Icon(icon, color: Colors.white, size: 24),
@@ -429,7 +429,7 @@ class _SplashScreenState extends State<SplashScreen>
                     Text(
                       subtitle,
                       style: TextStyle(
-                        color: Colors.white.withOpacity(0.9),
+                        color: Colors.white.withValues(alpha: 0.9),
                         fontSize: 11,
                         fontWeight: FontWeight.w500,
                       ),
@@ -441,7 +441,7 @@ class _SplashScreenState extends State<SplashScreen>
               // Arrow
               Icon(
                 Icons.arrow_forward_rounded,
-                color: Colors.white.withOpacity(0.9),
+                color: Colors.white.withValues(alpha: 0.9),
                 size: 20,
               ),
             ],

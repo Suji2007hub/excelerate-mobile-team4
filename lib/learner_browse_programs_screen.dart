@@ -1,6 +1,5 @@
 // lib/screens/learner_browse_programs_screen.dart
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'learner_program_details_screen.dart';
 
 const kPrimary = Color(0xFFE0194A);
@@ -50,7 +49,7 @@ class _LearnerBrowseProgramsScreenState
       'modules': '12 modules',
       'duration': '8 weeks',
       'progress': 0.67,
-      'iconColor': kTeal.value,
+      'iconColor': kTeal.toARGB32(),
       'iconCode': Icons.menu_book_rounded.codePoint,
       'level': 'Beginner',
     },
@@ -61,7 +60,7 @@ class _LearnerBrowseProgramsScreenState
       'modules': '10 modules',
       'duration': '6 weeks',
       'progress': 0.50,
-      'iconColor': kPurple.value,
+      'iconColor': kPurple.toARGB32(),
       'iconCode': Icons.people_alt_rounded.codePoint,
       'level': 'Intermediate',
     },
@@ -72,7 +71,7 @@ class _LearnerBrowseProgramsScreenState
       'modules': '15 modules',
       'duration': '12 weeks',
       'progress': 0.0,
-      'iconColor': kOrange.value,
+      'iconColor': kOrange.toARGB32(),
       'iconCode': Icons.bar_chart_rounded.codePoint,
       'level': 'Advanced',
     },
@@ -83,7 +82,7 @@ class _LearnerBrowseProgramsScreenState
       'modules': '14 modules',
       'duration': '10 weeks',
       'progress': 0.25,
-      'iconColor': kPrimary.value,
+      'iconColor': kPrimary.toARGB32(),
       'iconCode': Icons.palette_rounded.codePoint,
       'level': 'Intermediate',
     },
@@ -94,7 +93,7 @@ class _LearnerBrowseProgramsScreenState
       'modules': '8 modules',
       'duration': '5 weeks',
       'progress': 0.0,
-      'iconColor': kPurple.value,
+      'iconColor': kPurple.toARGB32(),
       'iconCode': Icons.handshake_rounded.codePoint,
       'level': 'Beginner',
     },
@@ -105,7 +104,7 @@ class _LearnerBrowseProgramsScreenState
       'modules': '20 modules',
       'duration': '16 weeks',
       'progress': 0.10,
-      'iconColor': kTeal.value,
+      'iconColor': kTeal.toARGB32(),
       'iconCode': Icons.code_rounded.codePoint,
       'level': 'Advanced',
     },
@@ -320,7 +319,7 @@ class _LearnerBrowseProgramsScreenState
                       ? '${(progress * 12).round()} of 12 modules completed'
                       : '0 of 12 modules completed',
                   'progress': progress,
-                  'iconColor': iconColor.value,
+                  'iconColor': iconColor.toARGB32(),
                   'iconCode': iconCode,
                 },
               ),
@@ -343,7 +342,7 @@ class _LearnerBrowseProgramsScreenState
                   gradient: LinearGradient(
                     begin: Alignment.topLeft,
                     end: Alignment.bottomRight,
-                    colors: [iconColor, iconColor.withOpacity(0.7)],
+                    colors: [iconColor, iconColor.withValues(alpha: 0.7)],
                   ),
                   borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(14),
@@ -431,7 +430,7 @@ class _LearnerBrowseProgramsScreenState
                         padding: const EdgeInsets.symmetric(
                             horizontal: 6, vertical: 2),
                         decoration: BoxDecoration(
-                          color: kPrimary.withOpacity(0.1),
+                          color: kPrimary.withValues(alpha: 0.1),
                           borderRadius: BorderRadius.circular(6),
                         ),
                         child: const Text(

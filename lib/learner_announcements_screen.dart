@@ -125,7 +125,7 @@ class LearnerAnnouncementsScreen extends StatelessWidget {
     return ListView.separated(
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
       itemCount: samples.length,
-      separatorBuilder: (_, __) => const SizedBox(height: 12),
+      separatorBuilder: (_, _) => const SizedBox(height: 12),
       itemBuilder: (context, index) {
         final a = samples[index];
         return _buildAnnouncementCard(
@@ -143,7 +143,7 @@ class LearnerAnnouncementsScreen extends StatelessWidget {
     return ListView.separated(
       padding: const EdgeInsets.fromLTRB(20, 12, 20, 24),
       itemCount: docs.length,
-      separatorBuilder: (_, __) => const SizedBox(height: 12),
+      separatorBuilder: (_, _) => const SizedBox(height: 12),
       itemBuilder: (context, index) {
         final data = docs[index].data() as Map<String, dynamic>;
         final createdAt = (data['createdAt'] as Timestamp?)?.toDate() ??
@@ -152,7 +152,7 @@ class LearnerAnnouncementsScreen extends StatelessWidget {
             Icons.notifications_active_outlined.codePoint;
         return _buildAnnouncementCard(
           icon: IconData(iconCode, fontFamily: 'MaterialIcons'),
-          iconColor: Color(data['iconColor'] as int? ?? kTeal.value),
+          iconColor: Color(data['iconColor'] as int? ?? kTeal.toARGB32()),
           title: data['title'] as String? ?? 'Announcement',
           body: data['body'] as String? ?? '',
           time: createdAt,
@@ -184,7 +184,7 @@ class LearnerAnnouncementsScreen extends StatelessWidget {
             width: 40,
             height: 40,
             decoration: BoxDecoration(
-              color: iconColor.withOpacity(0.15),
+              color: iconColor.withValues(alpha: 0.15),
               borderRadius: BorderRadius.circular(10),
             ),
             child: Icon(icon, color: iconColor, size: 20),

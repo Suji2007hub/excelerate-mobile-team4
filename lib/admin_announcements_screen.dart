@@ -1,6 +1,6 @@
 // lib/screens/admin/admin_announcements_screen.dart
 import 'package:flutter/material.dart';
-import '../../widgets/admin_bottom_nav.dart';
+import 'admin_bottom_nav.dart';
 
 class AdminAnnouncementsScreen extends StatelessWidget {
   const AdminAnnouncementsScreen({super.key});
@@ -30,7 +30,7 @@ class AdminAnnouncementsScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(24),
               decoration: BoxDecoration(
-                color: const Color(0xFF059669).withOpacity(0.1),
+                color: const Color(0xFF059669).withValues(alpha: 0.1),
                 shape: BoxShape.circle,
               ),
               child: const Icon(

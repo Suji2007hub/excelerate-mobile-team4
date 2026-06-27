@@ -126,7 +126,7 @@ class _LearnerProgramDetailsScreenState
   }
 
   Color get _iconColor {
-    final value = widget.program['iconColor'] as int? ?? kTeal.value;
+    final value = widget.program['iconColor'] as int? ?? kTeal.toARGB32();
     return Color(value);
   }
 
@@ -223,13 +223,13 @@ class _LearnerProgramDetailsScreenState
           end: Alignment.bottomRight,
           colors: [
             _iconColor,
-            _iconColor.withOpacity(0.7),
+            _iconColor.withValues(alpha: 0.7),
           ],
         ),
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: _iconColor.withOpacity(0.3),
+            color: _iconColor.withValues(alpha: 0.3),
             blurRadius: 15,
             offset: const Offset(0, 6),
           ),
@@ -241,7 +241,7 @@ class _LearnerProgramDetailsScreenState
             width: 70,
             height: 70,
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.2),
+              color: Colors.white.withValues(alpha: 0.2),
               borderRadius: BorderRadius.circular(14),
             ),
             child: Icon(_icon, color: Colors.white, size: 36),
@@ -255,7 +255,7 @@ class _LearnerProgramDetailsScreenState
                   padding: const EdgeInsets.symmetric(
                       horizontal: 8, vertical: 3),
                   decoration: BoxDecoration(
-                    color: Colors.white.withOpacity(0.25),
+                    color: Colors.white.withValues(alpha: 0.25),
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: const Text(
@@ -441,7 +441,7 @@ class _LearnerProgramDetailsScreenState
             width: 50,
             height: 50,
             decoration: BoxDecoration(
-              color: kPurple.withOpacity(0.15),
+              color: kPurple.withValues(alpha: 0.15),
               shape: BoxShape.circle,
             ),
             child: const Center(
@@ -514,7 +514,7 @@ class _LearnerProgramDetailsScreenState
         onPressed: _isEnrolling || _isEnrolled ? null : _enrollInProgram,
         style: ElevatedButton.styleFrom(
           backgroundColor: kPrimary,
-          disabledBackgroundColor: kPrimary.withOpacity(0.4),
+          disabledBackgroundColor: kPrimary.withValues(alpha: 0.4),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(12),
           ),

@@ -1,6 +1,5 @@
 // lib/screens/tutor_browse_programs_screen.dart
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'tutor_program_details_screen.dart';
 
 const kPrimary = Color(0xFFE0194A);

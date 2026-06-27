@@ -1,4 +1,5 @@
-import 'screens/splash_screen.dart';
+import 'splash_screen.dart';
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
@@ -7,12 +8,16 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   try {
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
+    if (kIsWeb) {
+      await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform,
+      );
+    } else {
+      await Firebase.initializeApp();
+    }
   } catch (e) {
-    // This will prevent the app from crashing if firebase_options.dart is a placeholder.
-    // The app will run without a Firebase connection.
+    // This will prevent the app from crashing if firebase configuration is missing.
+    // The app will run without a Firebase connection until platform config is added.
     // ignore: avoid_print
     print('Firebase initialization failed. Please configure Firebase correctly.');
   }

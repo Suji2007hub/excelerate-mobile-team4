@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import '../widgets/learner_bottom_nav.dart';
+import 'learner_bottom_nav.dart';
 import 'learner_home_screen.dart';
 
 const kPrimary = Color(0xFFE0194A);
@@ -226,7 +226,7 @@ class _LearnerProgressScreenState extends State<LearnerProgressScreen> {
                   boxShadow: isCurrent
                       ? [
                     BoxShadow(
-                      color: color.withOpacity(0.3),
+                      color: color.withValues(alpha: 0.3),
                       blurRadius: 8,
                       spreadRadius: 1,
                     ),
@@ -317,7 +317,7 @@ class _LearnerProgressScreenState extends State<LearnerProgressScreen> {
             width: 36,
             height: 36,
             decoration: BoxDecoration(
-              color: color.withOpacity(0.15),
+              color: color.withValues(alpha: 0.15),
               borderRadius: BorderRadius.circular(8),
             ),
             child: Icon(icon, color: color, size: 18),
@@ -420,7 +420,7 @@ class _LearnerProgressScreenState extends State<LearnerProgressScreen> {
                     width: 36,
                     height: 36,
                     decoration: BoxDecoration(
-                      color: kPurple.withOpacity(0.15),
+                      color: kPurple.withValues(alpha: 0.15),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: const Icon(
@@ -488,7 +488,7 @@ class _LearnerProgressScreenState extends State<LearnerProgressScreen> {
           width: 28,
           height: 28,
           decoration: BoxDecoration(
-            color: kPurple.withOpacity(0.1),
+            color: kPurple.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(6),
           ),
           child: Icon(icon, color: kPurple, size: 14),
@@ -514,9 +514,9 @@ class _LearnerProgressScreenState extends State<LearnerProgressScreen> {
                 children: answers.map((a) => Container(
                   padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
                   decoration: BoxDecoration(
-                    color: kPrimary.withOpacity(0.1),
+                    color: kPrimary.withValues(alpha: 0.1),
                     borderRadius: BorderRadius.circular(8),
-                    border: Border.all(color: kPrimary.withOpacity(0.3)),
+                    border: Border.all(color: kPrimary.withValues(alpha: 0.3)),
                   ),
                   child: Text(
                     a,
@@ -593,7 +593,7 @@ class _LearnerProgressScreenState extends State<LearnerProgressScreen> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
                 decoration: BoxDecoration(
-                  color: kPrimary.withOpacity(0.1),
+                  color: kPrimary.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: const Text(

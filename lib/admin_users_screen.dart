@@ -329,7 +329,7 @@ class _AdminUsersScreenState extends State<AdminUsersScreen> {
                 height: 48,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: _getRoleColor(role).withOpacity(0.15),
+                  color: _getRoleColor(role).withValues(alpha: 0.15),
                   border: Border.all(color: _getRoleColor(role), width: 1.5),
                 ),
                 child: Center(
@@ -421,9 +421,9 @@ class _AdminUsersScreenState extends State<AdminUsersScreen> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(4),
-        border: Border.all(color: color.withOpacity(0.3)),
+        border: Border.all(color: color.withValues(alpha: 0.3)),
       ),
       child: Text(
         text,
@@ -520,7 +520,7 @@ class _AdminUsersScreenState extends State<AdminUsersScreen> {
                 ),
                 const SizedBox(height: 10),
                 DropdownButtonFormField<String>(
-                  value: selectedRole,
+                  initialValue: selectedRole,
                   decoration: const InputDecoration(
                     labelText: 'Role',
                     border: OutlineInputBorder(),
@@ -593,8 +593,9 @@ class _AdminUsersScreenState extends State<AdminUsersScreen> {
       _showSnackBar('✅ User created successfully');
     } on FirebaseAuthException catch (e) {
       String msg = 'Failed to create user';
-      if (e.code == 'email-already-in-use') msg = 'Email already exists';
-      else if (e.code == 'weak-password') {
+      if (e.code == 'email-already-in-use') {
+        msg = 'Email already exists';
+      } else if (e.code == 'weak-password') {
         msg = 'Password too weak (min 6 chars)';
       }
       _showSnackBar(msg, isError: true);

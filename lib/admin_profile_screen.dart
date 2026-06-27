@@ -1,10 +1,10 @@
 // lib/screens/admin/admin_profile_screen.dart
-import 'package:excelerate_pathfinder/screens/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../../widgets/admin_bottom_nav.dart';
+import 'admin_bottom_nav.dart';
 import 'admin_login_screen.dart';
+import 'splash_screen.dart';
 
 const kAdminPrimary = Color(0xFF1E40AF);
 const kAdminAccent = Color(0xFF0EA5E9);
@@ -116,7 +116,7 @@ class _AdminProfileScreenState extends State<AdminProfileScreen> {
                           width: 90,
                           height: 90,
                           decoration: BoxDecoration(
-                            color: kAdminAccent.withOpacity(0.2),
+                            color: kAdminAccent.withValues(alpha: 0.2),
                             shape: BoxShape.circle,
                             border: Border.all(color: Colors.white, width: 4),
                           ),
@@ -164,7 +164,7 @@ class _AdminProfileScreenState extends State<AdminProfileScreen> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 8, vertical: 3),
                       decoration: BoxDecoration(
-                        color: kAdminDanger.withOpacity(0.1),
+                        color: kAdminDanger.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(6),
                       ),
                       child: Text(

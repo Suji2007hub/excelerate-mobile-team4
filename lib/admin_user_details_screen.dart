@@ -126,7 +126,7 @@ class _AdminUserDetailsScreenState extends State<AdminUserDetailsScreen> {
                 height: 60,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: kAdminPrimary.withOpacity(0.1),
+                  color: kAdminPrimary.withValues(alpha: 0.1),
                   border: Border.all(color: kAdminPrimary, width: 2),
                 ),
                 child: Center(
@@ -214,7 +214,7 @@ class _AdminUserDetailsScreenState extends State<AdminUserDetailsScreen> {
                   color: kMutedFg)),
           const SizedBox(height: 14),
           DropdownButtonFormField<String>(
-            value: _selectedRole,
+            initialValue: _selectedRole,
             decoration: const InputDecoration(
               labelText: 'Role',
               border: OutlineInputBorder(),
@@ -229,7 +229,7 @@ class _AdminUserDetailsScreenState extends State<AdminUserDetailsScreen> {
           ),
           const SizedBox(height: 10),
           DropdownButtonFormField<String>(
-            value: _selectedStatus,
+            initialValue: _selectedStatus,
             decoration: const InputDecoration(
               labelText: 'Status',
               border: OutlineInputBorder(),
@@ -253,7 +253,7 @@ class _AdminUserDetailsScreenState extends State<AdminUserDetailsScreen> {
       decoration: BoxDecoration(
         color: kCardBg,
         borderRadius: BorderRadius.circular(16),
-        border: Border.all(color: kAdminDanger.withOpacity(0.3), width: 1.5),
+        border: Border.all(color: kAdminDanger.withValues(alpha: 0.3), width: 1.5),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -309,9 +309,9 @@ class _AdminUserDetailsScreenState extends State<AdminUserDetailsScreen> {
         child: Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            border: Border.all(color: color.withOpacity(0.3)),
+            border: Border.all(color: color.withValues(alpha: 0.3)),
             borderRadius: BorderRadius.circular(10),
-            color: isDestructive ? color.withOpacity(0.05) : null,
+            color: isDestructive ? color.withValues(alpha: 0.05) : null,
           ),
           child: Row(
             children: [

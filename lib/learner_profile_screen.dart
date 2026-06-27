@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:confetti/confetti.dart';
-import '../widgets/learner_bottom_nav.dart';
+import 'learner_bottom_nav.dart';
 import 'splash_screen.dart';  // ✅ Import the splash screen
 
 const kPrimary = Color(0xFFE0194A);
@@ -360,7 +360,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             borderRadius: BorderRadius.circular(10),
             boxShadow: [
               BoxShadow(
-                color: kPrimary.withOpacity(0.3),
+                color: kPrimary.withValues(alpha: 0.3),
                 blurRadius: 6,
                 offset: const Offset(0, 2),
               ),
@@ -393,7 +393,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 1),
                 decoration: BoxDecoration(
-                  color: kAuthAccentDark.withOpacity(0.08),
+                  color: kAuthAccentDark.withValues(alpha: 0.08),
                   borderRadius: BorderRadius.circular(8),
                 ),
                 child: const Text(
@@ -448,7 +448,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             border: Border.all(color: kBorder),
             boxShadow: [
               BoxShadow(
-                color: Colors.black.withOpacity(0.04),
+                color: Colors.black.withValues(alpha: 0.04),
                 blurRadius: 12,
                 offset: const Offset(0, 4),
               ),
@@ -485,7 +485,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             border: Border.all(color: Colors.white, width: 4),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.black.withOpacity(0.1),
+                                color: Colors.black.withValues(alpha: 0.1),
                                 blurRadius: 10,
                                 offset: const Offset(0, 4),
                               ),
@@ -613,9 +613,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       decoration: BoxDecoration(
-        color: color.withOpacity(0.1),
+        color: color.withValues(alpha: 0.1),
         borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: color.withOpacity(0.2)),
+        border: Border.all(color: color.withValues(alpha: 0.2)),
       ),
       child: Row(
         mainAxisSize: MainAxisSize.min,
@@ -680,7 +680,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           decoration: BoxDecoration(
             color: kCardBg,
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: kPurple.withOpacity(0.3), width: 1.5),
+            border: Border.all(color: kPurple.withValues(alpha: 0.3), width: 1.5),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -877,7 +877,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       padding: const EdgeInsets.symmetric(
                           horizontal: 8, vertical: 2),
                       decoration: BoxDecoration(
-                        color: kPrimary.withOpacity(0.1),
+                        color: kPrimary.withValues(alpha: 0.1),
                         borderRadius: BorderRadius.circular(10),
                       ),
                       child: Text(
@@ -947,10 +947,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: Container(
           padding: const EdgeInsets.all(12),
           decoration: BoxDecoration(
-            color: unlocked ? kCardBg : kMuted.withOpacity(0.3),
+            color: unlocked ? kCardBg : kMuted.withValues(alpha: 0.3),
             borderRadius: BorderRadius.circular(12),
             border: Border.all(
-              color: unlocked ? color.withOpacity(0.3) : kMuted,
+              color: unlocked ? color.withValues(alpha: 0.3) : kMuted,
               width: 1,
             ),
           ),
@@ -961,7 +961,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 width: 44,
                 height: 44,
                 decoration: BoxDecoration(
-                  color: unlocked ? color.withOpacity(0.15) : kMuted,
+                  color: unlocked ? color.withValues(alpha: 0.15) : kMuted,
                   shape: BoxShape.circle,
                 ),
                 child: Icon(icon,
@@ -1157,7 +1157,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
     decoration: BoxDecoration(
       color: kCardBg,
       borderRadius: BorderRadius.circular(16),
-      border: Border.all(color: kPrimary.withOpacity(0.3)),
+      border: Border.all(color: kPrimary.withValues(alpha: 0.3)),
     ),
     child: Row(children: [
       const Icon(Icons.error_outline, color: kPrimary),
@@ -1418,7 +1418,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   SwitchListTile(
                     title: const Text('Deadline Reminders'),
                     value: prefs['deadlineReminders'] ?? true,
-                    activeColor: kPrimary,
+                    activeThumbColor: kPrimary,
                     contentPadding: EdgeInsets.zero,
                     onChanged: (v) =>
                         setState(() => prefs['deadlineReminders'] = v),
@@ -1426,7 +1426,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   SwitchListTile(
                     title: const Text('Session Alerts'),
                     value: prefs['sessionAlerts'] ?? true,
-                    activeColor: kPrimary,
+                    activeThumbColor: kPrimary,
                     contentPadding: EdgeInsets.zero,
                     onChanged: (v) =>
                         setState(() => prefs['sessionAlerts'] = v),
@@ -1434,7 +1434,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   SwitchListTile(
                     title: const Text('Progress Updates'),
                     value: prefs['progressUpdates'] ?? true,
-                    activeColor: kPrimary,
+                    activeThumbColor: kPrimary,
                     contentPadding: EdgeInsets.zero,
                     onChanged: (v) =>
                         setState(() => prefs['progressUpdates'] = v),
@@ -1478,7 +1478,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
             width: 80,
             height: 80,
             decoration: BoxDecoration(
-              color: unlocked ? color.withOpacity(0.15) : kMuted,
+              color: unlocked ? color.withValues(alpha: 0.15) : kMuted,
               shape: BoxShape.circle,
               border: unlocked
                   ? Border.all(color: color, width: 2)
@@ -1503,7 +1503,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               padding: const EdgeInsets.symmetric(
                   horizontal: 12, vertical: 6),
               decoration: BoxDecoration(
-                color: kSuccess.withOpacity(0.1),
+                color: kSuccess.withValues(alpha: 0.1),
                 borderRadius: BorderRadius.circular(20),
               ),
               child: const Row(
@@ -1709,7 +1709,7 @@ class _BadgeCelebrationOverlayState extends State<_BadgeCelebrationOverlay>
   @override
   Widget build(BuildContext context) {
     return Material(
-      color: Colors.black.withOpacity(0.85),
+      color: Colors.black.withValues(alpha: 0.85),
       child: Stack(
         children: [
           Align(
@@ -1789,13 +1789,13 @@ class _BadgeCelebrationOverlayState extends State<_BadgeCelebrationOverlay>
                         gradient: LinearGradient(
                           colors: [
                             widget.color,
-                            widget.color.withOpacity(0.7),
+                            widget.color.withValues(alpha: 0.7),
                           ],
                         ),
                         borderRadius: BorderRadius.circular(30),
                         boxShadow: [
                           BoxShadow(
-                            color: widget.color.withOpacity(0.5),
+                            color: widget.color.withValues(alpha: 0.5),
                             blurRadius: 20,
                             spreadRadius: 2,
                           ),
@@ -1844,7 +1844,7 @@ class _BadgeCelebrationOverlayState extends State<_BadgeCelebrationOverlay>
                               decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 border: Border.all(
-                                  color: widget.color.withOpacity(0.4),
+                                  color: widget.color.withValues(alpha: 0.4),
                                   width: 2,
                                 ),
                               ),
@@ -1862,13 +1862,13 @@ class _BadgeCelebrationOverlayState extends State<_BadgeCelebrationOverlay>
                               shape: BoxShape.circle,
                               gradient: RadialGradient(
                                 colors: [
-                                  widget.color.withOpacity(0.9),
-                                  widget.color.withOpacity(0.5),
+                                  widget.color.withValues(alpha: 0.9),
+                                  widget.color.withValues(alpha: 0.5),
                                 ],
                               ),
                               boxShadow: [
                                 BoxShadow(
-                                  color: widget.color.withOpacity(0.6),
+                                  color: widget.color.withValues(alpha: 0.6),
                                   blurRadius: 30,
                                   spreadRadius: 5,
                                 ),
@@ -1900,7 +1900,7 @@ class _BadgeCelebrationOverlayState extends State<_BadgeCelebrationOverlay>
                                             colors: [
                                               Colors.transparent,
                                               Colors.white
-                                                  .withOpacity(0.4),
+                                                  .withValues(alpha: 0.4),
                                               Colors.transparent,
                                             ],
                                             stops: const [0.0, 0.5, 1.0],
@@ -1955,7 +1955,7 @@ class _BadgeCelebrationOverlayState extends State<_BadgeCelebrationOverlay>
                         widget.description,
                         textAlign: TextAlign.center,
                         style: TextStyle(
-                          color: Colors.white.withOpacity(0.85),
+                          color: Colors.white.withValues(alpha: 0.85),
                           fontSize: 15,
                           fontWeight: FontWeight.w500,
                           height: 1.5,
@@ -1983,7 +1983,7 @@ class _BadgeCelebrationOverlayState extends State<_BadgeCelebrationOverlay>
                             borderRadius: BorderRadius.circular(30),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.white.withOpacity(0.3),
+                                color: Colors.white.withValues(alpha: 0.3),
                                 blurRadius: 12,
                                 spreadRadius: 1,
                               ),
@@ -2062,7 +2062,7 @@ class _PulsingGlowRingState extends State<_PulsingGlowRing>
           decoration: BoxDecoration(
             shape: BoxShape.circle,
             border: Border.all(
-              color: widget.color.withOpacity(1 - _ctrl.value),
+              color: widget.color.withValues(alpha: 1 - _ctrl.value),
               width: 3,
             ),
           ),
@@ -2082,7 +2082,7 @@ class _DashedCirclePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = color.withOpacity(0.6)
+      ..color = color.withValues(alpha: 0.6)
       ..strokeWidth = 2
       ..style = PaintingStyle.stroke;
 

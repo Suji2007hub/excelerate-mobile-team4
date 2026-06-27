@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'tutor_login_screen.dart';
+import '../Tutor Login Page/Tutor_login_screen.dart';
 
 // ─── Color constants ────────────────────────────────────────────────────
 const kAuthPrimary = Color(0xFF5E35B1);

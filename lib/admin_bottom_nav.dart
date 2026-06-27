@@ -2,12 +2,12 @@
 import 'package:flutter/material.dart';
 
 // ✅ Admin Screens - matching your file names exactly
-import '../screens/admin_home_screen.dart';
-import '../screens/admin_users_screen.dart';
-import '../screens/admin_programs_screen.dart';
-import '../screens/admin_announcements_screen.dart';
-import '../screens/admin_analytics_screen.dart';
-import '../screens/admin_profile_screen.dart';
+import 'admin_home_screen.dart';
+import 'admin_users_screen.dart';
+import 'admin_programs_screen.dart';
+import 'admin_announcements_screen.dart';
+import 'admin_analytics_screen.dart';
+import 'admin_profile_screen.dart';
 
 // Color constants (matching learner style)
 const kPrimary = Color(0xFFE0194A);
@@ -56,7 +56,7 @@ class AdminBottomNav extends StatelessWidget {
         color: Colors.white,
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.05),
+            color: Colors.black.withValues(alpha: 0.05),
             blurRadius: 10,
             offset: const Offset(0, -2),
           ),

@@ -7,7 +7,7 @@ import 'tutor_bottom_nav.dart';
 import 'tutor_program_details_screen.dart';
 import 'tutor_announcements_screen.dart';
 import 'tutor_browse_programs_screen.dart';
-import 'tutor_login_screen.dart';
+import '../Tutor Login Page/Tutor_login_screen.dart';
 
 const kPrimary = Color(0xFFE0194A);
 const kPurple = Color(0xFF9B59B6);

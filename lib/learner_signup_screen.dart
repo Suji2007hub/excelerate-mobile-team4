@@ -491,7 +491,7 @@ class _SignupScreenState extends State<SignupScreen>
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.05),
+                      color: Colors.black.withValues(alpha: 0.05),
                       blurRadius: 30,
                       offset: const Offset(0, 10),
                     ),
@@ -701,7 +701,7 @@ class _SignupScreenState extends State<SignupScreen>
                                 WidgetSpan(
                                   child: MouseRegion(
                                     cursor: SystemMouseCursors.click,
-                                    child: const Text(
+                                    child: Text(
                                       'Terms of Service',
                                       style: TextStyle(
                                           color: kAuthAccent,
@@ -713,7 +713,7 @@ class _SignupScreenState extends State<SignupScreen>
                                 WidgetSpan(
                                   child: MouseRegion(
                                     cursor: SystemMouseCursors.click,
-                                    child: const Text(
+                                    child: Text(
                                       'Privacy Policy',
                                       style: TextStyle(
                                           color: kAuthAccent,
@@ -739,7 +739,7 @@ class _SignupScreenState extends State<SignupScreen>
                         style: ElevatedButton.styleFrom(
                           backgroundColor: kAuthPrimary,
                           disabledBackgroundColor:
-                          kAuthPrimary.withOpacity(0.4),
+                          kAuthPrimary.withValues(alpha: 0.4),
                           shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(12)),
                           elevation: 0,
@@ -830,8 +830,8 @@ class _SignupScreenState extends State<SignupScreen>
                     shape: BoxShape.circle,
                     gradient: RadialGradient(
                       colors: [
-                        kAuthAccentDark.withOpacity(_logoGlow.value * 0.4),
-                        kAuthAccentDark.withOpacity(0.0),
+                        kAuthAccentDark.withValues(alpha: _logoGlow.value * 0.4),
+                        kAuthAccentDark.withValues(alpha: 0.0),
                       ],
                     ),
                   ),
@@ -848,7 +848,7 @@ class _SignupScreenState extends State<SignupScreen>
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: kAuthAccentDark.withOpacity(0.4),
+                        color: kAuthAccentDark.withValues(alpha: 0.4),
                         blurRadius: 10,
                         spreadRadius: 1,
                       ),
@@ -891,7 +891,7 @@ class _SignupScreenState extends State<SignupScreen>
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
           decoration: BoxDecoration(
-            color: kAuthAccentDark.withOpacity(0.08),
+            color: kAuthAccentDark.withValues(alpha: 0.08),
             borderRadius: BorderRadius.circular(12),
           ),
           child: const Text(
@@ -948,7 +948,7 @@ class _SignupScreenState extends State<SignupScreen>
       iconColor = kAuthPrimary;
     } else {
       borderColor = kAuthAccent;
-      bgColor = kAuthFieldBg.withOpacity(0.5);
+      bgColor = kAuthFieldBg.withValues(alpha: 0.5);
       iconColor = kAuthAccent;
     }
 
@@ -968,7 +968,7 @@ class _SignupScreenState extends State<SignupScreen>
             boxShadow: focused
                 ? [
               BoxShadow(
-                color: kAuthPrimary.withOpacity(0.12),
+                color: kAuthPrimary.withValues(alpha: 0.12),
                 blurRadius: 8,
                 offset: const Offset(0, 2),
               ),
@@ -986,7 +986,7 @@ class _SignupScreenState extends State<SignupScreen>
             decoration: InputDecoration(
               hintText: hint,
               hintStyle: TextStyle(
-                color: Colors.black.withOpacity(0.35),
+                color: Colors.black.withValues(alpha: 0.35),
                 fontSize: 14,
               ),
               prefixIcon: Padding(
@@ -1057,8 +1057,8 @@ class _GradientBackground extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               gradient: RadialGradient(colors: [
-                kAuthBlobPink.withOpacity(0.7),
-                kAuthBlobPink.withOpacity(0.0)
+                kAuthBlobPink.withValues(alpha: 0.7),
+                kAuthBlobPink.withValues(alpha: 0.0)
               ]),
             ),
           ),
@@ -1072,8 +1072,8 @@ class _GradientBackground extends StatelessWidget {
             decoration: BoxDecoration(
               shape: BoxShape.circle,
               gradient: RadialGradient(colors: [
-                const Color(0xFFF8BBD0).withOpacity(0.4),
-                const Color(0xFFF8BBD0).withOpacity(0.0)
+                const Color(0xFFF8BBD0).withValues(alpha: 0.4),
+                const Color(0xFFF8BBD0).withValues(alpha: 0.0)
               ]),
             ),
           ),
@@ -1089,14 +1089,14 @@ class _GradientBackground extends StatelessWidget {
                 begin: Alignment.topCenter,
                 end: Alignment.bottomCenter,
                 colors: [
-                  kAuthBlobLavender.withOpacity(0.35),
-                  kAuthBlobLavender.withOpacity(0.0)
+                  kAuthBlobLavender.withValues(alpha: 0.35),
+                  kAuthBlobLavender.withValues(alpha: 0.0)
                 ],
               ),
             ),
           ),
         ),
-        child!,
+        child,
       ],
     );
   }

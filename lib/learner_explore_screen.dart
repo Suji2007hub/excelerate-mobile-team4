@@ -1,6 +1,6 @@
 // lib/screens/learner_explore_screen.dart
 import 'package:flutter/material.dart';
-import '../widgets/learner_bottom_nav.dart';
+import 'learner_bottom_nav.dart';
 import 'learner_program_details_screen.dart';
 import 'learner_home_screen.dart';
 
@@ -33,7 +33,7 @@ class _LearnerExploreScreenState extends State<LearnerExploreScreen> {
       'duration': '12 weeks',
       'students': 1234,
       'rating': 4.8,
-      'iconColor': kTeal.value,
+      'iconColor': kTeal.toARGB32(),
       'iconCode': Icons.psychology_rounded.codePoint,
       'tag': 'Popular',
     },
@@ -45,7 +45,7 @@ class _LearnerExploreScreenState extends State<LearnerExploreScreen> {
       'duration': '8 weeks',
       'students': 892,
       'rating': 4.6,
-      'iconColor': kOrange.value,
+      'iconColor': kOrange.toARGB32(),
       'iconCode': Icons.trending_up_rounded.codePoint,
       'tag': 'New',
     },
@@ -57,7 +57,7 @@ class _LearnerExploreScreenState extends State<LearnerExploreScreen> {
       'duration': '10 weeks',
       'students': 2103,
       'rating': 4.9,
-      'iconColor': kPurple.value,
+      'iconColor': kPurple.toARGB32(),
       'iconCode': Icons.palette_rounded.codePoint,
       'tag': 'Trending',
     },
@@ -69,7 +69,7 @@ class _LearnerExploreScreenState extends State<LearnerExploreScreen> {
       'duration': '16 weeks',
       'students': 3456,
       'rating': 4.7,
-      'iconColor': kPrimary.value,
+      'iconColor': kPrimary.toARGB32(),
       'iconCode': Icons.code_rounded.codePoint,
       'tag': 'Bestseller',
     },
@@ -81,7 +81,7 @@ class _LearnerExploreScreenState extends State<LearnerExploreScreen> {
       'duration': '6 weeks',
       'students': 567,
       'rating': 4.5,
-      'iconColor': kTeal.value,
+      'iconColor': kTeal.toARGB32(),
       'iconCode': Icons.business_center_rounded.codePoint,
       'tag': null,
     },
@@ -93,7 +93,7 @@ class _LearnerExploreScreenState extends State<LearnerExploreScreen> {
       'duration': '14 weeks',
       'students': 1890,
       'rating': 4.8,
-      'iconColor': kOrange.value,
+      'iconColor': kOrange.toARGB32(),
       'iconCode': Icons.bar_chart_rounded.codePoint,
       'tag': 'Popular',
     },
@@ -255,7 +255,7 @@ class _LearnerExploreScreenState extends State<LearnerExploreScreen> {
         borderRadius: BorderRadius.circular(16),
         boxShadow: [
           BoxShadow(
-            color: kPrimary.withOpacity(0.3),
+            color: kPrimary.withValues(alpha: 0.3),
             blurRadius: 15,
             offset: const Offset(0, 6),
           ),
@@ -371,7 +371,7 @@ class _LearnerExploreScreenState extends State<LearnerExploreScreen> {
                   'title': program['title'],
                   'modules': '0 of 12 modules',
                   'progress': 0.0,
-                  'iconColor': iconColor.value,
+                  'iconColor': iconColor.toARGB32(),
                   'iconCode': program['iconCode'],
                 },
               ),

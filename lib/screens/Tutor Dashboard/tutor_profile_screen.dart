@@ -5,7 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:confetti/confetti.dart';
 import 'tutor_bottom_nav.dart';
-import 'splash_screen.dart';  // ✅ Import the splash screen
+import '../splash_screen.dart';
 
 const kPrimary = Color(0xFFE0194A);
 const kCrimson = Color(0xFFC0392B);
@@ -670,115 +670,122 @@ class _ProfileScreenState extends State<ProfileScreen> {
           if (nameCtrl.text.isEmpty) {
             nameCtrl.text = data['displayName'] ?? '';
             phoneCtrl.text = data['phone'] ?? '';
-                titleCtrl.text = data['title'] ?? 'Tutor';
-          padding: const EdgeInsets.all(20),
-          decoration: BoxDecoration(
-            color: kCardBg,
-            borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: kPurple.withValues(alpha: 0.3), width: 1.5),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.stretch,
-            children: [
-              Row(
-                children: [
-                  const Icon(Icons.edit, color: kPurple, size: 20),
-                  const SizedBox(width: 8),
-                  const Text('Edit Profile',
-                      style: TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.w800)),
-                  const Spacer(),
-                  MouseRegion(
-                    cursor: SystemMouseCursors.click,
-                    child: GestureDetector(
-                      onTap: () => setState(() => _isEditMode = false),
-                      child: Container(
-                        padding: const EdgeInsets.all(4),
-                        decoration: const BoxDecoration(
-                          color: kMuted,
-                          shape: BoxShape.circle,
-                        ),
-                        child: const Icon(Icons.close,
-                            size: 16, color: kMutedFg),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 20),
-              _buildEditField(
-                  label: 'Full Name',
-                  controller: nameCtrl,
-                  icon: Icons.person_outline),
-              const SizedBox(height: 12),
-              _buildEditField(
-                  label: 'Phone Number',
-                  controller: phoneCtrl,
-                  icon: Icons.phone_outlined),
-              const SizedBox(height: 12),
-              _buildEditField(
-                  label: 'Title',
-                  controller: titleCtrl,
-                  icon: Icons.badge_outlined),
-              const SizedBox(height: 12),
-              _buildEditField(
-                  label: 'Tier',
-                  controller: tierCtrl,
-                  icon: Icons.workspace_premium_outlined),
-              const SizedBox(height: 20),
-              Row(
-                children: [
-                  Expanded(
-                    child: MouseRegion(
+            titleCtrl.text = data['title'] ?? 'Tutor';
+            tierCtrl.text = data['tier'] ?? '';
+          }
+
+          return Container(
+            padding: const EdgeInsets.all(20),
+            decoration: BoxDecoration(
+              color: kCardBg,
+              borderRadius: BorderRadius.circular(16),
+              border: Border.all(color: kPurple.withValues(alpha: 0.3), width: 1.5),
+            ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                Row(
+                  children: [
+                    const Icon(Icons.edit, color: kPurple, size: 20),
+                    const SizedBox(width: 8),
+                    const Text('Edit Profile',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.w800)),
+                    const Spacer(),
+                    MouseRegion(
                       cursor: SystemMouseCursors.click,
-                      child: OutlinedButton(
-                        onPressed: () => setState(() => _isEditMode = false),
-                        style: OutlinedButton.styleFrom(
-                          padding: const EdgeInsets.symmetric(vertical: 14),
-                          side: const BorderSide(color: kBorder, width: 1.5),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
+                      child: GestureDetector(
+                        onTap: () => setState(() => _isEditMode = false),
+                        child: Container(
+                          padding: const EdgeInsets.all(4),
+                          decoration: const BoxDecoration(
+                            color: kMuted,
+                            shape: BoxShape.circle,
+                          ),
+                          child: const Icon(Icons.close,
+                              size: 16, color: kMutedFg),
                         ),
-                        child: const Text('Cancel',
-                            style: TextStyle(
-                                color: kFg, fontWeight: FontWeight.w600)),
                       ),
                     ),
-                  ),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: MouseRegion(
-                      cursor: SystemMouseCursors.click,
-                      child: ElevatedButton(
-                        onPressed: () async {
-                          await _saveProfile(
-                            name: nameCtrl.text.trim(),
-                            phone: phoneCtrl.text.trim(),
-                            title: titleCtrl.text.trim(),
-                            tier: tierCtrl.text.trim(),
-                          );
-                          if (mounted) {
-                            setState(() => _isEditMode = false);
-                          }
-                        },
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: kPurple,
-                          padding: const EdgeInsets.symmetric(vertical: 14),
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(10)),
+                  ],
+                ),
+                const SizedBox(height: 20),
+                _buildEditField(
+                    label: 'Full Name',
+                    controller: nameCtrl,
+                    icon: Icons.person_outline),
+                const SizedBox(height: 12),
+                _buildEditField(
+                    label: 'Phone Number',
+                    controller: phoneCtrl,
+                    icon: Icons.phone_outlined),
+                const SizedBox(height: 12),
+                _buildEditField(
+                    label: 'Title',
+                    controller: titleCtrl,
+                    icon: Icons.badge_outlined),
+                const SizedBox(height: 12),
+                _buildEditField(
+                    label: 'Tier',
+                    controller: tierCtrl,
+                    icon: Icons.workspace_premium_outlined),
+                const SizedBox(height: 20),
+                Row(
+                  children: [
+                    Expanded(
+                      child: MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: OutlinedButton(
+                          onPressed: () => setState(() => _isEditMode = false),
+                          style: OutlinedButton.styleFrom(
+                            padding: const EdgeInsets.symmetric(vertical: 14),
+                            side: const BorderSide(color: kBorder, width: 1.5),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10)),
+                          ),
+                          child: const Text('Cancel',
+                              style: TextStyle(
+                                  color: kFg, fontWeight: FontWeight.w600)),
                         ),
-                        child: const Text('Save Changes',
-                            style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.w700)),
                       ),
                     ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-        );
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: MouseRegion(
+                        cursor: SystemMouseCursors.click,
+                        child: ElevatedButton(
+                          onPressed: () async {
+                            await _saveProfile(
+                              name: nameCtrl.text.trim(),
+                              phone: phoneCtrl.text.trim(),
+                              title: titleCtrl.text.trim(),
+                              tier: tierCtrl.text.trim(),
+                            );
+                            if (mounted) {
+                              setState(() => _isEditMode = false);
+                            }
+                          },
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: kPurple,
+                            padding: const EdgeInsets.symmetric(vertical: 14),
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10)),
+                          ),
+                          child: const Text('Save Changes',
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w700)),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+          );
+        }
+
+        return const SizedBox.shrink();
       },
     );
   }

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'tutor_home_screen.dart';
-import 'tutor_onboarding_quiz_screen.dart';
-import 'tutor_signup_screen.dart';
-import 'tutor_forgot_password_screen.dart';
+import '../Tutor Dashboard/tutor_home_screen.dart';
+import '../Tutor Dashboard/tutor_onboarding_quiz_screen.dart';
+import '../Tutor sign up page/Tutor_signup_screen.dart';
+import 'Tutor_forgot_password_screen.dart';
 
 // ─── Color constants ────────────────────────────────────────────────────
 const kAuthPrimary = Color(0xFF5E35B1);
@@ -290,8 +290,9 @@ class _LoginScreenState extends State<LoginScreen>
   Future<void> _handleGoogleSignIn() async {
     setState(() => _submitting = true);
     try {
-      final GoogleSignIn googleSignIn = GoogleSignIn(clientId: kWebClientId);
-      final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
+      await GoogleSignIn.instance.initialize(clientId: kWebClientId);
+      final GoogleSignInAccount? googleUser =
+          await GoogleSignIn.instance.authenticate();
 
       if (googleUser == null) {
         setState(() => _submitting = false);
@@ -299,10 +300,9 @@ class _LoginScreenState extends State<LoginScreen>
       }
 
       final GoogleSignInAuthentication googleAuth =
-      await googleUser.authentication;
+          googleUser.authentication;
 
       final credential = GoogleAuthProvider.credential(
-        accessToken: googleAuth.accessToken,
         idToken: googleAuth.idToken,
       );
 
