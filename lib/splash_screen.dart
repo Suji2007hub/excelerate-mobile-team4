@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../theme/app_theme_splash.dart';
+import 'app_theme_splash.dart';
 import 'admin_login_screen.dart';
 import 'learner_login_screen.dart';
 

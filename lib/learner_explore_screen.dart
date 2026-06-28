@@ -1,6 +1,6 @@
 // lib/screens/learner_explore_screen.dart
 import 'package:flutter/material.dart';
-import '../widgets/learner_bottom_nav.dart';
+import 'learner_bottom_nav.dart';
 import 'learner_program_details_screen.dart';
 import 'learner_home_screen.dart';
 

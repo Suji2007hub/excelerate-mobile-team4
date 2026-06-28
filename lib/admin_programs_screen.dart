@@ -1,6 +1,6 @@
 // lib/screens/admin/admin_programs_screen.dart
 import 'package:flutter/material.dart';
-import '../../widgets/admin_bottom_nav.dart';
+import 'admin_bottom_nav.dart';
 import 'admin_home_screen.dart';
 
 class AdminProgramsScreen extends StatelessWidget {

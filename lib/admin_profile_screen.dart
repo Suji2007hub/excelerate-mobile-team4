@@ -1,9 +1,9 @@
 // lib/screens/admin/admin_profile_screen.dart
-import 'package:excelerate_pathfinder/screens/splash_screen.dart';
+import 'splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../../widgets/admin_bottom_nav.dart';
+import 'admin_bottom_nav.dart';
 import 'admin_login_screen.dart';
 
 const kAdminPrimary = Color(0xFF1E40AF);

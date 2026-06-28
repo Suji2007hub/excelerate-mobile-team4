@@ -1,6 +1,6 @@
 // lib/screens/learner_learning_screen.dart
 import 'package:flutter/material.dart';
-import '../widgets/learner_bottom_nav.dart';
+import 'learner_bottom_nav.dart';
 import 'learner_home_screen.dart';
 
 const kPrimary = Color(0xFFE0194A);
