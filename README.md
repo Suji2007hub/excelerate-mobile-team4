@@ -169,7 +169,7 @@ Each learner has a profile screen showing their personal information, enrolled p
 
 #### Sign Up
 <p align="center">
-  <img src="screenshots/Sign_Up.png" width="300" alt="Sign Up Screen"/>
+  <img width="720" height="1612" alt="WhatsApp Image 2026-06-28 at 8 52 58 AM" src="https://github.com/user-attachments/assets/d47e812f-6072-49fd-9653-6de18ed056ba" />
 </p>
 
 New learners create their account with email and password, or via Google Sign-In. Role selection (Learner / Admin / Tutor) happens at registration.
@@ -193,51 +193,36 @@ The quiz collects skill level, goals, and interests. Responses are stored in Fir
 A curated list of recommended programs, ordered by relevance to the learner's onboarding answers. This is the learner's home base — their map through Excelerate.
 
 ---
+#### Home
+
+<img width="482" height="1080" alt="WhatsApp Image 2026-06-15 at 1 24 50 PM" src="https://github.com/user-attachments/assets/40ee9f74-5732-4702-94e5-03ffd3978489" />
+
 
 #### Progress Tracker
 <p align="center">
-  <img src="screenshots/Progress_Tracker.png" width="300" alt="Progress Tracker"/>
+  <img width="482" height="1080" alt="WhatsApp Image 2026-06-28 at 9 42 42 AM" src="https://github.com/user-attachments/assets/c9a63530-7b5a-4e45-bf3b-4780b029871f" />
 </p>
-
+                
 Real-time progress for each enrolled program. Learners can see exactly how far they have come and what remains — keeping motivation high.
 
 ---
 
 #### Opportunity Details
-<p align="center">
-  <img src="screenshots/Opportunity_Details.png" width="300" alt="Opportunity Details"/>
+<p align="center"><img width="720" height="1612" alt="WhatsApp Image 2026-06-28 at 8 52 58 AM" src="https://github.com/user-attachments/assets/1b52913c-3ffd-4fd2-8244-3a1c82ecbec5" />
+
+  <img width="482" height="1080" alt="WhatsApp Image 2026-06-15 at 1 24 49 PM (2)" src="https://github.com/user-attachments/assets/89a5ac2f-c88c-4d2d-8aa3-87ea09077a36" />
 </p>
 
-Full detail view for any program — description, skills, duration, and a clear call to action to enrol.
-
----
-
-#### Credential Summary Card
-<p align="center">
-  <img src="screenshots/Credential_Summary_Card.png" width="300" alt="Credential Summary Card"/>
-</p>
-
-The shareable credential generated on program completion. Learners tap to share directly to LinkedIn, WhatsApp, Twitter/X, or any other platform.
+Full detail view for any program — description, skills, duration, and a clear call to action to enrol
 
 ---
 
 #### Profile Screen
 <p align="center">
-  <img src="screenshots/Profile_Screen.png" width="300" alt="Profile Screen"/>
+ <img width="482" height="1080" alt="WhatsApp Image 2026-06-28 at 8 49 33 AM" src="https://github.com/user-attachments/assets/995842e4-ecc7-4dac-9d43-22d0039530a2" />
 </p>
 
 The learner's personal hub — showing their account details, enrolled programs, credentials earned, and overall progress at a glance.
-
----
-
-### Tutor Flow
-
-#### Feedback Pulse (Tutor Side)
-<p align="center">
-  <img src="screenshots/Teachers__side__Feedback_pulse_.png" width="300" alt="Tutor Feedback Pulse"/>
-</p>
-
-Tutors receive live Pulse Check feedback from learners here. Session ratings and comments are displayed in real time — sourced from Firestore listeners — so tutors can act on feedback immediately.
 
 ---
 
@@ -245,7 +230,7 @@ Tutors receive live Pulse Check feedback from learners here. Session ratings and
 
 #### Admin Login
 <p align="center">
-  <img src="screenshots/Admin_Login.png" width="300" alt="Admin Login"/>
+  <img width="720" height="1612" alt="WhatsApp Image 2026-06-28 at 9 25 38 AM" src="https://github.com/user-attachments/assets/977d749a-d8f5-46dd-a410-1b5c6d055faf" />
 </p>
 
 A dedicated, secured login portal for administrators — separate from the learner login flow.
@@ -254,19 +239,10 @@ A dedicated, secured login portal for administrators — separate from the learn
 
 #### Dashboard Overview (Admin)
 <p align="center">
-  <img src="screenshots/Dashboard_Overview__Admin_.png" width="300" alt="Admin Dashboard"/>
+  <img width="482" height="1080" alt="WhatsApp Image 2026-06-28 at 9 29 15 AM" src="https://github.com/user-attachments/assets/4ade36ad-abfb-45d8-9dcd-9ff072439080" />
 </p>
 
 The admin's bird's-eye view of platform activity — enrolments, active learners, and program performance metrics.
-
----
-
-#### Opportunity Management (Admin)
-<p align="center">
-  <img src="screenshots/Opportunity_Management__Admin_.png" width="300" alt="Opportunity Management"/>
-</p>
-
-Admins create, edit, publish, and manage all learning opportunities from this screen. Changes reflect immediately across all learner roadmaps via Firestore.
 
 ---
 
@@ -278,7 +254,7 @@ Admins create, edit, publish, and manage all learning opportunities from this sc
 | **Backend / Database** | Firebase (Cloud Firestore) |
 | **Authentication** | Firebase Authentication + Google Sign-In |
 | **Real-time Sync** | Firestore real-time listeners |
-| **Platform Targets** | Android, iOS |
+| **Platform Targets** | Android, iOS | web
 
 ### Flutter & Dart
 The entire UI is built with Flutter using a widget-based component architecture. Flutter's cross-platform nature means a single codebase runs natively on both Android and iOS, with platform-specific UI conventions handled via `cupertino_icons` for iOS-style elements.
@@ -466,7 +442,7 @@ service cloud.firestore {
 
 ---
 
-## 🏗 Backend Architecture
+## Backend Architecture
 
 ### Authentication Flow
 
