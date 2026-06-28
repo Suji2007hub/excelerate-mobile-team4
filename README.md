@@ -178,7 +178,7 @@ New learners create their account with email and password, or via Google Sign-In
 
 #### Onboarding Quiz
 <p align="center">
-  <img src="screenshots/Onboarding_Quiz.png" width="300" alt="Onboarding Quiz"/>
+  <img width="720" height="1612" alt="WhatsApp Image 2026-06-28 at 9 22 00 AM" src="https://github.com/user-attachments/assets/493ce313-fb8d-4e3e-95f8-5aa05fa7ae8e" />
 </p>
 
 The quiz collects skill level, goals, and interests. Responses are stored in Firestore and used to generate the personalised roadmap immediately after completion.
