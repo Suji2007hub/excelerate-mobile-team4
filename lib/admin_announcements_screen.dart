@@ -1,6 +1,6 @@
 // lib/screens/admin/admin_announcements_screen.dart
 import 'package:flutter/material.dart';
-import '../../widgets/admin_bottom_nav.dart';
+import 'admin_bottom_nav.dart';
 
 class AdminAnnouncementsScreen extends StatelessWidget {
   const AdminAnnouncementsScreen({super.key});

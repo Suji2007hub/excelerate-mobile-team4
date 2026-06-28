@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../widgets/learner_bottom_nav.dart';
+import 'learner_bottom_nav.dart';
 import 'learner_program_details_screen.dart';
 import 'learner_announcements_screen.dart';
 import 'learner_browse_programs_screen.dart';

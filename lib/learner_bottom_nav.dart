@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 
 // Screens that bottom nav can route to
-import '../screens/learner_home_screen.dart';
-import '../screens/learner_explore_screen.dart';
-import '../screens/learner_learning_screen.dart';
-import '../screens/learner_progress_screen.dart';
-import '../screens/learner_profile_screen.dart';
+import 'learner_home_screen.dart';
+import 'learner_explore_screen.dart';
+import 'learner_learning_screen.dart';
+import 'learner_progress_screen.dart';
+import 'learner_profile_screen.dart';
 
 // Color constants
 const kPrimary = Color(0xFFE0194A);

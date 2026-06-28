@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../../widgets/admin_bottom_nav.dart';
+import 'admin_bottom_nav.dart';
 import 'admin_users_screen.dart';
 import 'admin_programs_screen.dart';
 import 'admin_announcements_screen.dart';

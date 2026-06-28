@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:confetti/confetti.dart';
-import '../widgets/learner_bottom_nav.dart';
+import 'learner_bottom_nav.dart';
 import 'splash_screen.dart';  // ✅ Import the splash screen
 
 const kPrimary = Color(0xFFE0194A);
